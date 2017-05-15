@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="run tests in parallel" duration-ms="90780" started-at="2017-05-09T12:25:00Z" finished-at="2017-05-09T12:26:31Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:BDD.Cucumber.FailedRunnerTest@7c16905e]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:BDD.Cucumber.RunnerTest@51efea79]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Tests in Browser" duration-ms="90780" started-at="2017-05-09T12:25:00Z" finished-at="2017-05-09T12:26:31Z">
+      <class name="BDD.Cucumber.FailedRunnerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:BDD.Cucumber.FailedRunnerTest@7c16905e]" name="setUpClass" is-config="true" duration-ms="65" started-at="2017-05-09T17:55:47Z" finished-at="2017-05-09T17:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="start()[pri:0, instance:BDD.Cucumber.FailedRunnerTest@7c16905e]" name="start" is-config="true" duration-ms="11724" started-at="2017-05-09T17:55:47Z" finished-at="2017-05-09T17:55:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:BDD.Cucumber.FailedRunnerTest@7c16905e]" name="feature" duration-ms="27527" started-at="2017-05-09T17:55:59Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-05-09T17:56:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Validate the sharper imagae website by placing an order]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:BDD.Cucumber.FailedRunnerTest@7c16905e]" name="teardown" is-config="true" duration-ms="4583" started-at="2017-05-09T17:56:26Z" finished-at="2017-05-09T17:56:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:BDD.Cucumber.FailedRunnerTest@7c16905e]" name="tearDownClass" is-config="true" duration-ms="28" started-at="2017-05-09T17:56:31Z" finished-at="2017-05-09T17:56:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- BDD.Cucumber.FailedRunnerTest -->
+      <class name="BDD.Cucumber.RunnerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:BDD.Cucumber.RunnerTest@51efea79]" name="setUpClass" is-config="true" duration-ms="347" started-at="2017-05-09T17:55:00Z" finished-at="2017-05-09T17:55:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="start()[pri:0, instance:BDD.Cucumber.RunnerTest@51efea79]" name="start" is-config="true" duration-ms="6579" started-at="2017-05-09T17:55:01Z" finished-at="2017-05-09T17:55:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:BDD.Cucumber.RunnerTest@51efea79]" name="feature" duration-ms="39254" started-at="2017-05-09T17:55:08Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2017-05-09T17:55:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Validate the sharper imagae website by placing an order]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:BDD.Cucumber.RunnerTest@51efea79]" name="tearDownClass" is-config="true" duration-ms="34" started-at="2017-05-09T17:55:47Z" finished-at="2017-05-09T17:55:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- BDD.Cucumber.RunnerTest -->
+    </test> <!-- Tests in Browser -->
+  </suite> <!-- run tests in parallel -->
+</testng-results>

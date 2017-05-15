@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!-- Use URL for BrowserStack capability information https://www.browserstack.com/automate/java -->
+
+<properties>
+	
+	<entry key = "URL">https://www.sharperimage.com/si/</entry>
+	
+</properties>
+

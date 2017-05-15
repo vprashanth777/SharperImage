@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" verbose="0" name="Failed suite [run tests in parallel]">
+  <test name="Tests in Browser(failed)">
+    <classes>
+      <class name="BDD.Cucumber.RunnerTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setUpClass"/>
+          <include name="start"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- BDD.Cucumber.RunnerTest -->
+      <class name="BDD.Cucumber.FailedRunnerTest">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="feature"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- BDD.Cucumber.FailedRunnerTest -->
+    </classes>
+  </test> <!-- Tests in Browser(failed) -->
+</suite> <!-- Failed suite [run tests in parallel] -->

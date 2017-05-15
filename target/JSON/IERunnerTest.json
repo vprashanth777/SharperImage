@@ -1,0 +1,110 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 116567054,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfterHooks.deleteAllCookies()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Place an order in sharperimage Website",
+        "description": "",
+        "id": "validate-the-sharper-imagae-website-by-placing-an-order;place-an-order-in-sharperimage-website",
+        "after": [
+          {
+            "result": {
+              "duration": 151071,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BeforeAfterHooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 15978376288,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigate to sharperimage website",
+            "match": {
+              "location": "SharperImage.user_navigate_to_sharperimage_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11150139762,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User able to see the Homepage with Categories",
+            "match": {
+              "location": "SharperImage.user_able_to_see_the_Homepage_with_Categories()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6156953977,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User clicks on gadgets",
+            "match": {
+              "location": "SharperImage.user_clicks_on_gadgets()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 646551203,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User should redirect to gadgets page",
+            "match": {
+              "location": "SharperImage.user_should_redirect_to_gadgets_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3457551242,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User able to  filter by Price",
+            "match": {
+              "location": "SharperImage.user_able_to_filter_by_Price()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Validate the sharper imagae website by placing an order",
+    "description": "",
+    "id": "validate-the-sharper-imagae-website-by-placing-an-order",
+    "keyword": "Feature",
+    "uri": "FeaureFiles/SharperImage_Placeorder.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@PlaceOrder"
+      }
+    ]
+  }
+]
