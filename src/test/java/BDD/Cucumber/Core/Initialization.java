@@ -24,7 +24,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -119,6 +120,17 @@ public class Initialization{
 				driver.manage().window().maximize();
 				
 				}
+			
+			else if(BrowserType.equalsIgnoreCase("PHANTOMJS")) {
+				
+				
+				capabilities.setJavascriptEnabled(true);                
+				capabilities.setCapability("takesScreenshot", true);  
+				capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,"Drivers/phantomjs.exe");
+                    driver = new  PhantomJSDriver(capabilities);
+				
+			}
+			
 			else if(BrowserType.equalsIgnoreCase("NATIVE") || BrowserType.equalsIgnoreCase("HYBRID") ) {
 				
 				

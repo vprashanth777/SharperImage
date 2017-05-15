@@ -75,9 +75,13 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-server</artifactId>
-    <version>2.53.0</version>
+    <version>2.53.1</version>
 </dependency>
-
+<dependency>
+		<groupId>org.seleniumhq.selenium</groupId>
+		<artifactId>selenium-java</artifactId>
+		<version>2.53.1</version>
+	</dependency>
 	<dependency>
 		<groupId>info.cukes</groupId>
 		<artifactId>cucumber-java</artifactId>
@@ -113,11 +117,7 @@
 	</dependency>
 	
 
-	<dependency>
-		<groupId>org.seleniumhq.selenium</groupId>
-		<artifactId>selenium-java</artifactId>
-		<version>2.53.0</version>
-	</dependency>
+	
 	
 	<dependency>
 		<groupId>io.appium</groupId>
@@ -195,6 +195,13 @@
 		<version>6.8</version>
 		<scope>test</scope>
 	</dependency>
+<dependency>
+    <groupId>groupId</groupId>
+    <artifactId>artifactId</artifactId>
+    <version>1.0</version>
+    <scope>system</scope>
+    <systemPath>${basedir}/src/test/resources/Jars/phantomjsdriver-1.4.2.jar</systemPath>
+  </dependency>
 </dependencies>
 </project>
  
