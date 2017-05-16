@@ -10,6 +10,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import org.apache.log4j.Logger;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -21,6 +23,7 @@ import org.openqa.selenium.Proxy;
 import org.openqa.selenium.Proxy.ProxyType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -29,6 +32,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
@@ -45,17 +49,14 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class Initialization{
 	
 
-	 public  static WebDriver driver=null;
+	public  static WebDriver driver=null;
 	public  static AndroidDriver ADdriver=null;
 	public static WebDriverWait WD=null;
 	public static String BrowserType;
-
 	public static String winHandleBefore ;
 	public static  JavascriptExecutor JS=null;
-	
 	public static ReUsablesKeywords Reusables=null;
 	public  Logger log = CustomLogger.log(Initialization.class);
-
 	public static  AppiumServer appiumServer=null;
 	public static  Process process;
 	 
@@ -64,8 +65,7 @@ public class Initialization{
 	
 	public static WebDriver GetDriverObject() 
 	{
-		//String BrowserType=properties.getProperty("BrowserType");
-	
+			
 		  BrowserType = System.getProperty("BROWSER", "Firefox");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		
@@ -83,54 +83,74 @@ public class Initialization{
 				e.printStackTrace();
 			}
 			
+			
 			if(BrowserType.equalsIgnoreCase("IE")) {
 			
-				
-				
-				
 				capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-
-				capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
-						true);
-				
-
-				//System.setProperty("webdriver.ie.driver", "IEDriverServer.exe");
+				capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
 				System.setProperty("webdriver.ie.driver", "src/test/resources/Drivers/IEDriverServer.exe");
-				 driver = new InternetExplorerDriver(capabilities);
-
-				
-				driver.manage().window().maximize();
+				driver = new InternetExplorerDriver(capabilities);
 			}
 			
 			
 			else if(BrowserType.equalsIgnoreCase("CHROME")) {
-				
-				
-				
 				System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");
 				driver=new ChromeDriver();
-				driver.manage().window().maximize();
 			}
+			
+			else if(BrowserType.equalsIgnoreCase("SAFARI")) {
+				System.setProperty("webdriver.safari.noinstall", "true");
+				driver=new SafariDriver();
+				}
 			
 			else if(BrowserType.equalsIgnoreCase("FIREFOX")) {
 				//System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-				//System.setProperty("webdriver.gecko.driver", "Resources/Drivers/geckodriver.exe");
-				
+				//System.setProperty("webdriver.gecko.driver", "src/test/resources/Drivers/geckodriver.exe");
 				driver=new FirefoxDriver();
-				driver.manage().window().maximize();
-				
 				}
 			
 			else if(BrowserType.equalsIgnoreCase("PHANTOMJS")) {
-				
-				
 				capabilities.setJavascriptEnabled(true);                
 				capabilities.setCapability("takesScreenshot", true);  
 				capabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,"Drivers/phantomjs.exe");
                     driver = new  PhantomJSDriver(capabilities);
 				
 			}
+			//http://blog.wedoqa.com/2015/09/emulate-mobile-and-tablet-devices-with-chromedriver/
+			else if(BrowserType.equalsIgnoreCase("CHROMEIPAD")) {
+				Map<String, String> mobileEmulation = new HashMap<String, String>();
+		        mobileEmulation.put("deviceName", "Apple iPad");
+		        System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");
+		        Map<String, Object> chromeOptions = new HashMap<String, Object>();
+		        chromeOptions.put("mobileEmulation", mobileEmulation);
+		        DesiredCapabilities capabilities1 = DesiredCapabilities.chrome();
+		        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+		        WebDriver driver = new ChromeDriver(capabilities1);
+			}
 			
+			else if(BrowserType.equalsIgnoreCase("CHROMEIPHONE")) {
+				Map<String, String> mobileEmulation = new HashMap<String, String>();
+		        mobileEmulation.put("deviceName", "Apple iPhone 6");
+		        System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");
+		        Map<String, Object> chromeOptions = new HashMap<String, Object>();
+		        chromeOptions.put("mobileEmulation", mobileEmulation);
+		        DesiredCapabilities capabilities1 = DesiredCapabilities.chrome();
+		        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+		        WebDriver driver = new ChromeDriver(capabilities1);
+			}
+			
+			else if(BrowserType.equalsIgnoreCase("CHROMENEXUS")) {
+				Map<String, String> mobileEmulation = new HashMap<String, String>();
+		        mobileEmulation.put("deviceName", "Google Nexus 10");
+		        System.setProperty("webdriver.chrome.driver", "src/test/resources/Drivers/chromedriver.exe");
+		        Map<String, Object> chromeOptions = new HashMap<String, Object>();
+		        chromeOptions.put("mobileEmulation", mobileEmulation);
+		        DesiredCapabilities capabilities1 = DesiredCapabilities.chrome();
+		        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+		        WebDriver driver = new ChromeDriver(capabilities1);
+			}
+			
+			/*
 			else if(BrowserType.equalsIgnoreCase("NATIVE") || BrowserType.equalsIgnoreCase("HYBRID") ) {
 				
 				
@@ -148,7 +168,7 @@ public class Initialization{
 			
 			}
 			
-			/*			
+						
 			else if(BrowserType.equalsIgnoreCase("MOBIWEB")) {
 				
 				

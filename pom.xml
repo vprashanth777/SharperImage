@@ -67,6 +67,8 @@
 				</plugins>
 			</build>
 		</profile>
+		
+
 	</profiles>
 
 	<dependencies>
@@ -82,6 +84,9 @@
 		<artifactId>selenium-java</artifactId>
 		<version>2.53.1</version>
 	</dependency>
+
+
+	
 	<dependency>
 		<groupId>info.cukes</groupId>
 		<artifactId>cucumber-java</artifactId>
@@ -196,12 +201,19 @@
 		<scope>test</scope>
 	</dependency>
 <dependency>
-    <groupId>groupId</groupId>
-    <artifactId>artifactId</artifactId>
+    <groupId>sample</groupId>
+    <artifactId>com.sample</artifactId>
     <version>1.0</version>
     <scope>system</scope>
-    <systemPath>${basedir}/src/test/resources/Jars/phantomjsdriver-1.4.2.jar</systemPath>
-  </dependency>
+    <systemPath>${project.basedir}/src/test/resources/Jars/phantomjsdriver-1.4.2.jar</systemPath>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-safari-driver</artifactId>
+    <version>2.53.1</version>
+</dependency>
+
 </dependencies>
 </project>
  

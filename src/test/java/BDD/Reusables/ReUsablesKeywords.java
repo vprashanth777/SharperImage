@@ -86,7 +86,7 @@ public class ReUsablesKeywords extends Initialization {
 
 		};
 		try {
-			WD.until(pageLoaded);
+			//WD.until(pageLoaded);
 		} catch (Exception e) {
 
 			log.error("WaitforPageLoad exception occured " + e.toString());
