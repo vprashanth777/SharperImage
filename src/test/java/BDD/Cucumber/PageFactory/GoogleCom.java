@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import cucumber.api.java.en.When;
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,5 +44,15 @@ public class GoogleCom {
 
     public List<WebElement> getTheSearchResults() {
         return this.driver.findElements(search_results);
+    }
+    
+    @When("^User enter try to login with different credentials$")
+    public void user_enter_try_to_login_with_different_credentials(List<String> arg1) throws Throwable {
+    	
+    	for(String S:arg1)
+    	{
+    		System.out.println(S);
+    	}
+       
     }
 }

@@ -43,6 +43,7 @@
 			</div>
 			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+					<li class='analysis waves-effect'><a href='#!' class='categories-view' onclick="_updateCurrentStage(1)"><i class='mdi-maps-local-offer'></i>Categories</a></li>
 				<li class='analysis waves-effect'>
 					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
 				</li>
@@ -53,7 +54,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2017-05-09 17:56:26</span>
+					<span class='suite-started-time'>2017-11-02 19:48:12</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -83,25 +84,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 27s+486ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 11m 29s+703ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 27s+486ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 11m 29s+703ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2017-05-09 17:55:59</span> 
+							<span class='panel-lead suite-started-time'>2017-11-02 19:36:43</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2017-05-09 17:56:26</span> 
+							<span class='panel-lead suite-ended-time'>2017-11-02 19:48:12</span> 
 						</div> 
 					</div>
 				</div>
@@ -176,17 +177,58 @@
 										</tr>
 										<tr>
 											<td>Java Version</td>
-											<td>1.8.0_101</td>
+											<td>1.8.0_91</td>
 										</tr>
 										<tr>
 											<td>Host Name</td>
-											<td>FVTIII738F1L</td>
+											<td>SHVLSP3114F1L</td>
 										</tr>
 								</tbody>
 							</table>
 						</div>
 					</div>
 				</div>
+					<div class='category-summary-view'>
+						<div class='col l4 m6 s12'>
+							<div class='card-panel'>
+								<span class='label info outline right'>Categories</span>
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+										</tr>
+									</thead>
+									<tbody>
+											<tr>
+												<td>
+													@Coupon
+												</td>
+											</tr>
+											<tr>
+												<td>
+													@P1
+												</td>
+											</tr>
+											<tr>
+												<td>
+													@Payment
+												</td>
+											</tr>
+											<tr>
+												<td>
+													@Signup
+												</td>
+											</tr>
+											<tr>
+												<td>
+													@search
+												</td>
+											</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
 			</div>
 			<!-- /dashboard -->
 			
@@ -210,6 +252,20 @@
 									<li class='clear'><a href='#!'>Clear Filters</a></li>
 								</ul>
 							</div>
+								<div>
+									<a class='dropdown-button btn-floating btn-small waves-effect waves-light grey category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+										<i class='mdi-maps-local-offer'></i>
+									</a>
+									<ul id='category-toggle' class='dropdown-content'>
+											<li class='@Coupon'><a href='#!'>@Coupon</a></li>
+											<li class='@P1'><a href='#!'>@P1</a></li>
+											<li class='@Payment'><a href='#!'>@Payment</a></li>
+											<li class='@Signup'><a href='#!'>@Signup</a></li>
+											<li class='@search'><a href='#!'>@search</a></li>
+										<li class='divider'></li>
+										<li class='clear'><a href='#!'>Clear Filters</a></li>
+									</ul>
+								</div>
 							<div>
 								<a class='btn-floating btn-small waves-effect waves-light grey' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
 									<i class='mdi-navigation-close'></i>
@@ -237,20 +293,25 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active pass hasChildren' extentid='fa661fda-f627-4094-847e-38bbbb020c70'>
+										<li class='collection-item test displayed active pass hasChildren' extentid='ae75b24e-ddb8-410f-a609-757716f639da'>
 											<div class='test-head'>
-												<span class='test-name'>Feature: Validate the sharper imagae website by placing an order </span>
+												<span class='test-name'>Feature: Validate Payment Page(Mobile) </span>
 												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
+												<span class='category-assigned hide  @payment @coupon @p1'></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-05-09 17:55:59</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-05-09 17:56:26</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 27s+313ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-11-02 19:36:45</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-11-02 19:40:18</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 3m 33s+211ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>@Payment</span>
+																<span class='category text-white'>@Coupon</span>
+																<span class='category text-white'>@P1</span>
+														</div>
 												</div>
 												<div class='test-steps'>
 													<table class='bordered table-results'>
@@ -268,12 +329,12 @@
 																	<li class='displayed pass node-1x'>
 																		<div class='collapsible-header test-node pass'>
 																			<div class='right test-info'>
-																				<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-05-09 17:55:59</span>
-																				<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-05-09 17:56:26</span>
-																				<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-2 text-white'>0h 0m 27s+309ms</span>
+																				<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-02 19:36:45</span>
+																				<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-02 19:40:18</span>
+																				<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-2 text-white'>0h 3m 33s+185ms</span>
 																				<span class='test-status label outline capitalize pass'>pass</span>
 																			</div>
-																			<div class='test-node-name'>Scenario: Place an order in sharperimage Website</div>
+																			<div class='test-node-name'>Scenario: Apply Promo/Coupon code from Payment Method page (Mobile)</div>
 																				<div class='test-node-desc'></div>
 																		</div>
 																		<div class='collapsible-body'>
@@ -290,33 +351,496 @@
 																					<tbody>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>17:56:05</td>
+																								<td class='timestamp'>19:37:16</td>
 																									<td class='step-name'>User navigate to sharperimage website</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>17:56:18</td>
+																								<td class='timestamp'>19:37:18</td>
+																									<td class='step-name'>User Click the button "navButton" by "id"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:37:18</td>
+																									<td class='step-name'>User click the link contains "More Categories"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:37:51</td>
+																									<td class='step-name'>User click the  "For Her"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:37:51</td>
+																									<td class='step-name'>User check that the browser title contains "For Her"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:38:07</td>
+																									<td class='step-name'>User selected the item from list</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:05</td>
+																									<td class='step-name'>User Click the button "Add To Cart"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:05</td>
+																									<td class='step-name'>User check that the browser title contains "Shopping Cart"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:09</td>
+																									<td class='step-name'>User should select quantity as 1</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:17</td>
+																									<td class='step-name'>User Click the button "Checkout"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:17</td>
+																									<td class='step-name'>User check that the browser title contains "Shipping Billing"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:22</td>
+																									<td class='step-name'>User should enter Mandatory fields like firstname,lastname,2444 Merchant Ave 103, Odessa,FL,33556,7272648454,test@gmail.com</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:32</td>
+																									<td class='step-name'>User Click the button "Checkout as a guest"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:34</td>
+																									<td class='step-name'>User check that the browser title contains "Payment"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:34</td>
+																									<td class='step-name'>User enter inValid promo code</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:39:42</td>
+																									<td class='step-name'>User Click the button "Apply"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:40:04</td>
+																									<td class='step-name'>User able to see below text on page</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:40:08</td>
+																									<td class='step-name'>User enter Valid promo code</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:40:14</td>
+																									<td class='step-name'>User Click the button "Apply"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:40:17</td>
+																									<td class='step-name'>User able to see below text on page</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:40:17</td>
+																									<td class='step-name'>User should able to see the promotion code price</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																								<td class='timestamp'>19:40:18</td>
+																								<td class='step-details'><a href='screenshot-1509631818761.png' data-featherlight='image'><img class='report-img' src='screenshot-1509631818761.png' /></a></td>
+																							</tr>
+																					</tbody>
+																				</table>
+																			</div>
+																		</div>
+																	</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail hasChildren' extentid='c51c73fb-5b15-4cc9-bf7a-782bfa867524'>
+											<div class='test-head'>
+												<span class='test-name'>Feature: User should able to search an item (Mobile) </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide  @search @p1'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-11-02 19:40:19</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-11-02 19:43:08</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 2m 49s+299ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>@search</span>
+																<span class='category text-white'>@P1</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+																	<li class='displayed fail node-1x'>
+																		<div class='collapsible-header test-node fail'>
+																			<div class='right test-info'>
+																				<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-02 19:40:19</span>
+																				<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-02 19:43:08</span>
+																				<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-2 text-white'>0h 2m 49s+294ms</span>
+																				<span class='test-status label outline capitalize fail'>fail</span>
+																			</div>
+																			<div class='test-node-name'>Scenario: User should able to search an item(Mobile)</div>
+																				<div class='test-node-desc'></div>
+																		</div>
+																		<div class='collapsible-body'>
+																			<div class='test-steps'>
+																				<table class='bordered table-results'>
+																					<thead>
+																						<tr>
+																							<th>Status</th>
+																							<th>Timestamp</th>
+																								<th>StepName</th>
+																							<th>Details</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:41:33</td>
+																									<td class='step-name'>User navigate to sharperimage website</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:41:33</td>
 																									<td class='step-name'>User able to see the Homepage with Categories</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>17:56:23</td>
-																									<td class='step-name'>User clicks on gadgets</td>
+																								<td class='timestamp'>19:41:42</td>
+																									<td class='step-name'>User search with "200606"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>17:56:23</td>
-																									<td class='step-name'>User should redirect to gadgets page</td>
+																								<td class='timestamp'>19:41:42</td>
+																									<td class='step-name'>User check that the browser title contains "Towel Warmer"</td>
 																								<td class='step-details'>PASSED</td>
 																							</tr>
 																							<tr>
 																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																								<td class='timestamp'>17:56:26</td>
-																									<td class='step-name'>User able to  filter by Price</td>
+																								<td class='timestamp'>19:41:43</td>
+																									<td class='step-name'>User able to see below text on page</td>
 																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User Click the button "Add To Cart"</td>
+																								<td class='step-details'>org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for number to be more than "0". Current number: "0"
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'SHVLSP3114F1L', ip: '192.168.125.10', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:292)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at BDD.Cucumber.StepDefinations.commonStepDefinations.user_click_the_button_something(commonStepDefinations.java:724)
+	at ?.When User Click the button "Add To Cart"(FeaureFiles/SharperImageMobile/Search.feature:16)</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User check that the browser title contains "Shopping Cart"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User should select quantity as 2</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>Price need to update by Quantity</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User Click the button "Checkout"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User search with "Quickest Hair Straightening Brush"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User check that the browser title contains "Search Results Page @ Sharper Image"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User click the  "Hair Straightening Brush"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User check that the browser title contains "Quickest Hair Straightening Brush"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User Click the button "Add To Cart"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User check that the browser title contains "Shopping Cart"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User should select quantity as 1</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>Price need to update by Quantity</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:43:07</td>
+																									<td class='step-name'>User Click the button "Checkout"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																								<td class='timestamp'>19:43:08</td>
+																								<td class='step-details'><a href='screenshot-1509631988981.png' data-featherlight='image'><img class='report-img' src='screenshot-1509631988981.png' /></a></td>
+																							</tr>
+																					</tbody>
+																				</table>
+																			</div>
+																		</div>
+																	</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail hasChildren' extentid='72c79ef3-e303-44a0-a0af-097c93927fae'>
+											<div class='test-head'>
+												<span class='test-name'>Feature: Signup account Validations(Mobile) </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide  @signup @p1'></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2017-11-02 19:43:09</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2017-11-02 19:48:12</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 5m 3s+734ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+														<div class='categories'>
+																<span class='category text-white'>@Signup</span>
+																<span class='category text-white'>@P1</span>
+														</div>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+																	<li class='displayed fail node-1x'>
+																		<div class='collapsible-header test-node fail'>
+																			<div class='right test-info'>
+																				<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-2 text-white'>2017-11-02 19:43:09</span>
+																				<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-2 text-white'>2017-11-02 19:48:12</span>
+																				<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-2 text-white'>0h 5m 3s+731ms</span>
+																				<span class='test-status label outline capitalize fail'>fail</span>
+																			</div>
+																			<div class='test-node-name'>Scenario: Signup account (Mobile)</div>
+																				<div class='test-node-desc'></div>
+																		</div>
+																		<div class='collapsible-body'>
+																			<div class='test-steps'>
+																				<table class='bordered table-results'>
+																					<thead>
+																						<tr>
+																							<th>Status</th>
+																							<th>Timestamp</th>
+																								<th>StepName</th>
+																							<th>Details</th>
+																						</tr>
+																					</thead>
+																					<tbody>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:44:24</td>
+																									<td class='step-name'>User navigate to sharperimage website</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:44:25</td>
+																									<td class='step-name'>User Click the button "navButton" by "id"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:44:31</td>
+																									<td class='step-name'>User click the login</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:44:31</td>
+																									<td class='step-name'>User check that the browser title contains "Login"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:44:34</td>
+																									<td class='step-name'>User Click the Create an Account</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:44:34</td>
+																									<td class='step-name'>User check that the browser title contains "Register"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:44:43</td>
+																									<td class='step-name'>User enter First Name,Last Name,Email, Confirm Email ,Password,Confirm Password</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:44:43</td>
+																									<td class='step-name'>User check that the browser title contains "My Account"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:46:44</td>
+																									<td class='step-name'>User click the  "Sign Out"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:46:49</td>
+																									<td class='step-name'>User check that the browser title contains "The Sharper Image - Official Site"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																								<td class='timestamp'>19:46:50</td>
+																									<td class='step-name'>User Click the button "navButton" by "id"</td>
+																								<td class='step-details'>PASSED</td>
+																							</tr>
+																							<tr>
+																								<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																								<td class='timestamp'>19:48:11</td>
+																									<td class='step-name'>User click the login</td>
+																								<td class='step-details'>org.openqa.selenium.TimeoutException: Timed out after 60 seconds waiting for number to be more than "0". Current number: "0"
+Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
+System info: host: 'SHVLSP3114F1L', ip: '192.168.125.10', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:292)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at BDD.Cucumber.StepDefinations.SharperImage.user_click_the_login(SharperImage.java:1206)
+	at ?.When User click the login(FeaureFiles/SharperImageMobile/Signup.feature:19)</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:48:11</td>
+																									<td class='step-name'>User check that the browser title contains "Login"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:48:11</td>
+																									<td class='step-name'>User Click the Create an Account</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:48:11</td>
+																									<td class='step-name'>User check that the browser title contains "Register"</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+																								<td class='timestamp'>19:48:11</td>
+																									<td class='step-name'>User enter First Name,Last Name,Email, Confirm Email ,Password,Confirm Password</td>
+																								<td class='step-details'>SKIPPED</td>
+																							</tr>
+																							<tr>
+																								<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																								<td class='timestamp'>19:48:12</td>
+																								<td class='step-details'><a href='screenshot-1509632292857.png' data-featherlight='image'><img class='report-img' src='screenshot-1509632292857.png' /></a></td>
 																							</tr>
 																					</tbody>
 																				</table>
@@ -355,6 +879,261 @@
 			<!-- /tests -->
 			
 			<!-- categories -->
+				<div id='categories-view' class='row _addedTable hide'>
+					<div class='col _addedCell1'>
+						<div class='contents'>
+							<div class='card-panel heading'>
+								<h5>Categories</h5>
+							</div>
+							<div class='card-panel filters'>
+								<div class='search' alt='Search tests' title='Search tests'>
+									<div class='input-field left'>
+										<input id='searchTests' type='text' class='validate' placeholder='Search...'>
+									</div>
+									<a href="#" class='btn-floating btn-small waves-effect waves-light blue lighten-1'>
+										<i class='mdi-action-search'></i>
+									</a>
+								</div>
+							</div>
+							<div class='card-panel no-padding-h no-padding-v'>
+								<div class='wrapper'>
+									<ul id='cat-collection' class='cat-collection'>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>@Coupon</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='pass label dot'>Pass: 2</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='pass'>
+																		<td>2017-11-02 19:36:45</td>
+																		<td><span class='category-link linked' extentid='1129f96c-a659-43aa-9743-0d931aaa1cc3'>Scenario: Apply Promo/Coupon code from Payment Method page (Mobile)</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2017-11-02 19:36:45</td>
+																		<td><span class='category-link linked' extentid='ae75b24e-ddb8-410f-a609-757716f639da'>Feature: Validate Payment Page(Mobile)</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>@P1</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='pass label dot'>Pass: 2</span>
+														<span class='fail label dot'>Fail: 4</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>4</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='pass'>
+																		<td>2017-11-02 19:36:45</td>
+																		<td><span class='category-link linked' extentid='1129f96c-a659-43aa-9743-0d931aaa1cc3'>Scenario: Apply Promo/Coupon code from Payment Method page (Mobile)</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2017-11-02 19:36:45</td>
+																		<td><span class='category-link linked' extentid='ae75b24e-ddb8-410f-a609-757716f639da'>Feature: Validate Payment Page(Mobile)</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='fail'>
+																		<td>2017-11-02 19:40:19</td>
+																		<td><span class='category-link linked' extentid='cb2ef137-bc7a-4b66-bb34-1005d8960ebf'>Scenario: User should able to search an item(Mobile)</span></td>
+																		<td><div class='status label capitalize fail'>fail</div></td>
+																	</tr>
+																	<tr class='fail'>
+																		<td>2017-11-02 19:40:19</td>
+																		<td><span class='category-link linked' extentid='c51c73fb-5b15-4cc9-bf7a-782bfa867524'>Feature: User should able to search an item (Mobile)</span></td>
+																		<td><div class='status label capitalize fail'>fail</div></td>
+																	</tr>
+																	<tr class='fail'>
+																		<td>2017-11-02 19:43:09</td>
+																		<td><span class='category-link linked' extentid='7ea4ff9c-a7c7-4f85-b4f2-f32fcd549610'>Scenario: Signup account (Mobile)</span></td>
+																		<td><div class='status label capitalize fail'>fail</div></td>
+																	</tr>
+																	<tr class='fail'>
+																		<td>2017-11-02 19:43:09</td>
+																		<td><span class='category-link linked' extentid='72c79ef3-e303-44a0-a0af-097c93927fae'>Feature: Signup account Validations(Mobile)</span></td>
+																		<td><div class='status label capitalize fail'>fail</div></td>
+																	</tr>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>@Payment</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='pass label dot'>Pass: 2</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>2</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>0</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='pass'>
+																		<td>2017-11-02 19:36:45</td>
+																		<td><span class='category-link linked' extentid='1129f96c-a659-43aa-9743-0d931aaa1cc3'>Scenario: Apply Promo/Coupon code from Payment Method page (Mobile)</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+																	<tr class='pass'>
+																		<td>2017-11-02 19:36:45</td>
+																		<td><span class='category-link linked' extentid='ae75b24e-ddb8-410f-a609-757716f639da'>Feature: Validate Payment Page(Mobile)</span></td>
+																		<td><div class='status label capitalize pass'>pass</div></td>
+																	</tr>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>@Signup</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='fail label dot'>Fail: 2</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>0</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>2</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='fail'>
+																		<td>2017-11-02 19:43:09</td>
+																		<td><span class='category-link linked' extentid='7ea4ff9c-a7c7-4f85-b4f2-f32fcd549610'>Scenario: Signup account (Mobile)</span></td>
+																		<td><div class='status label capitalize fail'>fail</div></td>
+																	</tr>
+																	<tr class='fail'>
+																		<td>2017-11-02 19:43:09</td>
+																		<td><span class='category-link linked' extentid='72c79ef3-e303-44a0-a0af-097c93927fae'>Feature: Signup account Validations(Mobile)</span></td>
+																		<td><div class='status label capitalize fail'>fail</div></td>
+																	</tr>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+											<li class='category-item displayed'>
+												<div class='cat-head'>
+													<span class='category-name'>@search</span>
+												</div>
+												<div class='category-status-counts'>
+														<span class='fail label dot'>Fail: 2</span>
+												</div>
+												<div class='cat-body'>
+													<div class='category-status-counts'>
+														<div class='button-group'>
+															<a href='#!' class='pass label filter'>Pass <span class='icon'>0</span></a>
+															<a href='#!' class='fail label filter'>Fail <span class='icon'>2</span></a>
+															<a href='#!' class='other label filter'>Others <span class='icon'>0</span></a>
+														</div>
+													</div>
+													<div class='cat-tests'>
+														<table class='bordered'>
+															<thead>
+																<tr>
+																	<th>RunDate</th>
+																	<th>Test Name</th>
+																	<th>Status</th>
+																</tr>
+															</thead>
+															<tbody>
+																	<tr class='fail'>
+																		<td>2017-11-02 19:40:19</td>
+																		<td><span class='category-link linked' extentid='cb2ef137-bc7a-4b66-bb34-1005d8960ebf'>Scenario: User should able to search an item(Mobile)</span></td>
+																		<td><div class='status label capitalize fail'>fail</div></td>
+																	</tr>
+																	<tr class='fail'>
+																		<td>2017-11-02 19:40:19</td>
+																		<td><span class='category-link linked' extentid='c51c73fb-5b15-4cc9-bf7a-782bfa867524'>Feature: User should able to search an item (Mobile)</span></td>
+																		<td><div class='status label capitalize fail'>fail</div></td>
+																	</tr>
+															<tbody>
+														</table>
+													</div>
+												</div> 
+											</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id='cat-details-wrapper' class='col _addedCell2'>
+						<div class='contents'>
+							<div class='card-panel details-view'>
+								<h5 class='cat-name'></h5>
+								<div class='cat-container'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			<!-- /categories -->
 			
 			<!-- exceptions -->

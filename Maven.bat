@@ -1,4 +1,4 @@
 
-mvn -DBROWSER="Chrome" clean test 
+mvn -DBROWSER="chrome" clean test 
 
 

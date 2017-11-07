@@ -37,7 +37,7 @@ String logger;
 ExtentReports extent;
 ExtentTest test ;
 Logger log;
-public void testBrokenLinks(String URL) throws IOException, InterruptedException {
+public void testBrokenImages(String URL) throws IOException, InterruptedException {
 	 pageUrl=URL;
 	 
 	 Logger log=Logger.getLogger(BrokenImages.class);

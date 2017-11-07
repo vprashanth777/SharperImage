@@ -1,10 +1,13 @@
-@PlaceOrder
-Feature: Validate the sharper imagae website by placing an order
+@PlaceOrder123
 
-  Scenario: Place an order in sharperimage Website
+Feature: this is the first feature name
+  this is an example additional feature description
+
+  Background: 
     Given User navigate to sharperimage website
     Then User able to see the Homepage with Categories
-    When User clicks on gadgets
-    Then User should redirect to gadgets page
-    And User able to  filter by Price
-    
+    Given set cookie value to "Yes" mini cart
+
+  Scenario: User should able to search an item(Desktop)
+    When User add below product to cart
+      | 200977|

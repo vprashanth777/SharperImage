@@ -13,7 +13,7 @@
  
 	<profiles>
 		<profile>
-			<id>smokeTest</id>
+			<id>WindowTest</id>
 			<activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -32,17 +32,19 @@
 						<artifactId>maven-surefire-plugin</artifactId>
 						<version>2.19.1</version>
 						<configuration>
-							<suiteXmlFiles>
-								<suiteXmlFile>CucumberTestng.xml</suiteXmlFile>
+						 <suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestNGXML/WindowsTestng.xml</suiteXmlFile>
 							</suiteXmlFiles>
 							<testFailureIgnore>true</testFailureIgnore>
 						</configuration>
+						
 					</plugin>
 				</plugins>
 			</build>
 		</profile>
+		
 		<profile>
-			<id>regressionTest</id>
+			<id>WindowsTest1</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -59,7 +61,33 @@
 						<version>2.19.1</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>regressiontest.xml</suiteXmlFile>
+								<suiteXmlFile>src/test/resources/TestNGXML/WindowsTestng1.xml</suiteXmlFile>
+							</suiteXmlFiles>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>WindowsTest2</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.3</version>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.19.1</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestNGXML/WindowsTestng2.xml</suiteXmlFile>
 							</suiteXmlFiles>
 							<testFailureIgnore>true</testFailureIgnore>
 						</configuration>
@@ -68,17 +96,152 @@
 			</build>
 		</profile>
 		
+			<profile>
+			<id>WindowsTest3</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.3</version>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.19.1</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestNGXML/WindowsTestng3.xml</suiteXmlFile>
+							</suiteXmlFiles>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>Mobile</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.3</version>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.19.1</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestNGXML/MobileTestng.xml</suiteXmlFile>
+							</suiteXmlFiles>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>Mobile1</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.3</version>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.19.1</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestNGXML/MobileTestng1.xml</suiteXmlFile>
+							</suiteXmlFiles>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+<profile>
+			<id>P1</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.3</version>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.19.1</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestNGXML/P1.xml</suiteXmlFile>
+							</suiteXmlFiles>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 
+
+<profile>
+			<id>P2</id>
+			<build>
+				<plugins>
+					<plugin>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.3</version>
+						<configuration>
+							<source>1.8</source>
+							<target>1.8</target>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>2.19.1</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>src/test/resources/TestNGXML/P2.xml</suiteXmlFile>
+							</suiteXmlFiles>
+							<testFailureIgnore>true</testFailureIgnore>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		
+		
 	</profiles>
 
 	<dependencies>
 
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-server</artifactId>
-    <version>2.53.1</version>
+    <groupId>sample</groupId>
+    <artifactId>com.sample</artifactId>
+    <version>1.0</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/src/test/resources/Jars/selenium-server-standalone-2.53.1.jar</systemPath>
 </dependency>
+
 <dependency>
 		<groupId>org.seleniumhq.selenium</groupId>
 		<artifactId>selenium-java</artifactId>
@@ -121,6 +284,18 @@
 		<version>1.0.0</version>
 	</dependency>
 	
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-htmlunit-driver -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-htmlunit-driver</artifactId>
+    <version>2.52.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>4.5.1</version>
+</dependency>
 
 	
 	
@@ -154,11 +329,7 @@
 		<version>1.4.7</version>
 	</dependency>
 
-	<dependency>
-		<groupId>org.seleniumhq.selenium</groupId>
-		<artifactId>htmlunit-driver</artifactId>
-		<version>2.23.2</version>
-	</dependency>
+
 
 	<dependency>
 		<groupId>org.eclipse.jetty.websocket</groupId>
@@ -200,18 +371,11 @@
 		<version>6.8</version>
 		<scope>test</scope>
 	</dependency>
+
 <dependency>
-    <groupId>sample</groupId>
-    <artifactId>com.sample</artifactId>
-    <version>1.0</version>
-    <scope>system</scope>
-    <systemPath>${project.basedir}/src/test/resources/Jars/phantomjsdriver-1.4.2.jar</systemPath>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-safari-driver</artifactId>
-    <version>2.53.1</version>
+    <groupId>com.github.detro.ghostdriver</groupId>
+    <artifactId>phantomjsdriver</artifactId>
+    <version>1.0.1</version>
 </dependency>
 
 </dependencies>

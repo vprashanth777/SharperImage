@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd"> 
 <!-- Use URL for BrowserStack capability information https://www.browserstack.com/automate/java -->
 
 <properties>
-	
+	<!-- https://sio-stg-store.sparkred.com/si/index.jsp ,sharperimage -->
 	<entry key = "URL">https://www.sharperimage.com/si/</entry>
+	<entry key = "VIPEMAIL">prashanth518@gmail.com</entry>
+	<entry key = "EMAIL">siautomation@mailinator.com</entry>
+	
+	<entry key = "GIFTCARDEMAIL">giftcert@sharperimageonline.com</entry>
+	<entry key = "PRODGIFTCARDEMAIL">tigeroy@gmail.com</entry>
+	<entry key = "PASSWORD">Qwerty_1</entry>
+	<entry key = "VIPPASSWORD">Qwerty_1</entry>
+	<entry key = "PRODUCTIONGIFTCARD">123456</entry>
+	<entry key = "ZIPCODE">33556</entry>
+	<!--  
+	<entry key = "ORDERZIPCODE">48124</entry>
+	<entry key = "ORDEREMAIL">mburpee@sharperimageonline.com</entry>
+	-->
+	
+	<entry key = "ORDERZIPCODE">48334</entry>
+	<entry key = "ORDEREMAIL">penebeguc@matchpol.net</entry>
+	<entry key = "ORDERPASSWORD">password</entry>
+	<entry key = "ORDERPHONENUMBER">248-741-5132</entry>
+	
+	<entry key = "PHONE">7272648454</entry>
+	<entry key = "STAGINGGIFTCARD">3286216869860747</entry>
+	<entry key = "PRODGIFTCARD">3286216869860747</entry>
+	<entry key = "STAGINGCREDITCARD">4111111111111111</entry>
+	
+	<entry key = "AB_MINICART">YES</entry>
 	
 </properties>
 

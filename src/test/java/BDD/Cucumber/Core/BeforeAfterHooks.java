@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 
-public class BeforeAfterHooks{
+public class BeforeAfterHooks extends Initialization{
 
 	static Logger log;
 
@@ -23,7 +23,17 @@ public class BeforeAfterHooks{
 
 	@Before
 	public void deleteAllCookies() {
+	
+		if(driver==null)
+		{
+			GetDriverObject();
+		}
 		Initialization.GetDriverObject().manage().deleteAllCookies();
+		log.info("Cookies Deleted");
+		
+		log.info("Execution was started on browser ::" + getBrowserType());
+		
+		log.info(driver.manage().window().getSize());
 		
 	}
 
@@ -31,17 +41,27 @@ public class BeforeAfterHooks{
 	@After
 	public static void embedScreenshot(Scenario scenario) {
 		
-		if (scenario.isFailed()) {
-			
+		//if (scenario.isFailed()) {
+		if(driver!=null)
+		{
 			try {
 				byte[] screenshot = ((TakesScreenshot) Initialization.driver) .getScreenshotAs(OutputType.BYTES);
 				scenario.embed(screenshot, "image/png");
 			} catch (WebDriverException somePlatformsDontSupportScreenshots) {
 				log.error(somePlatformsDontSupportScreenshots.getMessage());
 			}
+			
 		}
+	
+		//}
 		
-	//	DriverManager.getDriver().quit();
+	/*	if(!GlobalExecution)
+	{driver.quit();
+		log.info("Execution Completed and Browser was quit");
+		
+		
+		    driver=null;
+	}*/
 	}
 
 }

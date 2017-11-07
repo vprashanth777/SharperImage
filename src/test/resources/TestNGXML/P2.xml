@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="run tests in parallel" verbose="1" configfailurepolicy="continue" >
+    
+    <test name="Tests in Browser">
+               <!-- If you want to be more specific, replace this with a list of test classes you'd like to run -->
+        <classes>
+            <class name="BDD.Cucumber.P2" />
+       
+        </classes>
+    </test>
+    
+  
+    
+   
+   
+</suite>

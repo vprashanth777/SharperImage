@@ -104,6 +104,7 @@ public void testBrokenLinks(String URL) throws IOException, InterruptedException
  Elements getLinksFromPage(Document page)
 {
   return page.select("a");
+ 
 }
  Elements getscriptsFromPage(Document page)
 {

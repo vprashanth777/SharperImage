@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -26,16 +27,20 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
+import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Test;
+
+import com.google.common.io.Files;
 
 import BDD.Cucumber.Core.*;
 
 
 public class Sendmail 
 {
-
+@Test
 	public  void mail( ) throws Exception
     {
 		
@@ -68,25 +73,35 @@ public class Sendmail
     	
     	String subject = P.getProperty("subject")+" - "+timeStamp;
          String to = P.getProperty("recipients");//change accordingly  
-         final String from = P.getProperty("from"); 
+       String from = P.getProperty("from"); 
+        // String from="sharperImageautomation@gmail.com";
          String host = P.getProperty("SMTP_HOST_NAME");//or IP address  
          String Port = P.getProperty("SMTP_PORT");
        
          
        
   
-         
-         Properties props = new Properties();
+     
+       Properties props = new Properties();
  		props.put("mail.smtp.auth", "true");
  		props.put("mail.smtp.starttls.enable", "true");
  		props.put("mail.smtp.host", host);
  		props.put("mail.smtp.port", Port);
+ 		
+         
+ 		  /*  Properties props = new Properties();    
+         props.put("mail.smtp.host", "smtp.gmail.com");    
+         props.put("mail.smtp.socketFactory.port", "465");    
+         props.put("mail.smtp.socketFactory.class",    
+                   "javax.net.ssl.SSLSocketFactory");    
+         props.put("mail.smtp.auth", "true");    
+         props.put("mail.smtp.port", "465");    */
  		//props.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
          
         Session session = Session.getDefaultInstance(props,  
         		   new javax.mail.Authenticator() {  
         		   protected PasswordAuthentication getPasswordAuthentication() {  
-        		   return new PasswordAuthentication(from,"Value*23");//change accordingly  
+        		   return new PasswordAuthentication(from,"Qwerty_4");//change accordingly  
         		   }  
         		  });  
          
@@ -151,7 +166,10 @@ public class Sendmail
             
             Transport.send(message);  
             System.out.println("message sent successfully....");  
-     
+            
+            
+        
+    	
          }catch (MessagingException mex) {mex.printStackTrace();}  
       }  
 		
